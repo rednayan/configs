@@ -29,6 +29,10 @@ formatter = {command = 'prettier' , args = ["--parser","typescript"]}
 auto-format = true
 
 [[language]]
+name = "typescript"
+language-server = { command = "deno", args = ["lsp"] }
+
+[[language]]
 name = "rust"
 scope = "source.rust"
 injection-regex = "rust"
@@ -36,7 +40,6 @@ file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
 comment-token = "//"
 formatter = {command = "rustfmt"}
-language-server = { command = "rust-analyzer" }
 indent = { tab-width = 4, unit = "    " }
 
 [language.debugger]
@@ -55,3 +58,4 @@ name = "binary"
 [language.debugger.templates.args]
 program = "{0}"
 runInTerminal = true
+
