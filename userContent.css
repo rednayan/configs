@@ -1,0 +1,37 @@
+
+@-moz-document url(about:privatebrowsing) {
+
+
+    /* Hides the "You're in private browsing mode" dialog */
+    .info {
+        display: none !important;
+    }
+    
+    
+    /* Changes the logo on the private browsing home screen */
+    html.private .logo {background-image: url(" RELATIVE IMAGE PATHNAME HERE") !important; display: none !important;}
+    
+    /* Changes the color of the wordmark */
+    .wordmark {
+      /* display: none !important; */
+    }
+    .search-inner-wrapper{
+        display: none !important;
+    }
+    .search-one-offs { display: none !important; }
+    
+
+    /* Centers logo and wordmark */
+    .logo-and-wordmark {
+      align-items: center !important;
+      display: flex !important;
+      justify-content: center !important;
+      margin-bottom: 49px !important;
+    }
+    
+    
+    
+    /* Changes the home screen color */
+    html.private {
+        --in-content-page-background: black !important;}
+    }
