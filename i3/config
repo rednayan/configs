@@ -25,10 +25,7 @@ set $down j
 set $left h
 set $right l
 
-font pango:OperatorMono Nerd Font 0
-
-
-
+font pango:DejaVu Sans Mono 8
 #####################################################################################################################
 #################                          Single and Dual screen                                   #################
 #####################################################################################################################
@@ -65,7 +62,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 #####################################################################################################################
 
 # start dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -nb '#1f222d' -nf '#81a1c1' -sb '#81a1c1' -sf '#1f222d' -fn 'OperatorMonoBook:bold:pixelsize=18'
+bindsym $mod+d exec --no-startup-id dmenu_run -i -nb '#1f222d' -nf '#fff' -sb '#81a1c1' -sf '#1f222d' -fn 'OperatorMonoBook:bold:pixelsize=11'
 
 
 
@@ -162,8 +159,6 @@ bindsym $mod+Shift+Right move right
 # next/previous workspace
 
 bindsym Mod1+Tab workspace next
-bindsym Mod1+Shift+Tab workspace prev
-bindsym $mod+Tab workspace back_and_forth
 
 #navigate workspaces next / previous
 bindsym Mod1+Ctrl+Right workspace next
@@ -187,8 +182,6 @@ bindsym $mod+minus scratchpad show
 # orientation for new workspaces
 default_orientation horizontal
 
-# split in horizontal orientation
-bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -211,7 +204,8 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 
-
+ 
+hide_edge_borders both
 ####################################################################################################################
 # resize window (you can also use the mouse for that)
 
@@ -267,7 +261,7 @@ bindsym $mod+Shift+Return exec --no-startup-id nemo;focus
 #####################################################################################################################
 
 bindsym Print exec maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png -i
-bindsym $mod+Print exec maim --select | tee ~/Pictures/$(date +%s).png | xclip -sel c -t image/png
+bindsym $mod+P exec maim --select | tee ~/Pictures/$(date +%s).png | xclip -sel c -t image/png
 
 
 
@@ -306,9 +300,6 @@ bindsym $mod+i bar mode invisible
 #################                          i3 gaps next                                             #################
 #####################################################################################################################
 for_window [class="^.*"] border pixel 1
-smart_gaps on
-smart_borders on
-
 #####################################################################################################################
 #################                          i3 gaps change                                           #################
 #####################################################################################################################
@@ -372,7 +363,6 @@ exec_always --no-startup-id ~/.config/i3/scripts/mouse.sh
 #####################################################################################################################
 
 bar {
-   	height 2
 	position bottom
     font pango:OperatorMono Nerd Font 9
     tray_padding 1
@@ -397,13 +387,13 @@ bar {
 
     # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
+    client.focused          #000000 #000000 #ffffff #81a1c1
     client.unfocused        #2e3440 #1f222d #888888 #1f222d
     client.focused_inactive #2e3440 #1f222d #888888 #1f222d
     client.placeholder      #2e3440 #1f222d #888888 #1f222d
     client.urgent           #900000 #900000 #ffffff #900000
 
-    client.background       #242424
+    client.background       #ffffff
 
     ##STOP THEMING WM
 
@@ -422,3 +412,5 @@ exec picom
 #####################################################################################################################
 #####################################################################################################################
 #####################################################################################################################
+
+
