@@ -228,11 +228,13 @@ mode "resize" {
        bindsym Down        resize grow height 1 px or 1 ppt
        bindsym Up          resize shrink height 1 px or 1 ppt
        bindsym Right       resize grow width 1 px or 1 ppt
-
         # back to normal: Enter or Escape
        bindsym Return mode "default"
        bindsym Escape mode "default"
 }
+
+
+default_border pixel 0 
 
 
 #####################################################################################################################
@@ -387,8 +389,8 @@ bar {
 
     # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #000000 #000000 #ffffff #81a1c1
-    client.unfocused        #2e3440 #1f222d #888888 #1f222d
+    client.focused          #2e3440 #1f222d #ffffff #81a1c1
+    client.unfocused        #2e3440 #000000 #888888 #1f222d
     client.focused_inactive #2e3440 #1f222d #888888 #1f222d
     client.placeholder      #2e3440 #1f222d #888888 #1f222d
     client.urgent           #900000 #900000 #ffffff #900000
