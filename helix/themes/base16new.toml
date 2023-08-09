@@ -1,18 +1,18 @@
-"ui.background" = { }
+"ui.background" = { bg = "#181818"}
 "ui.menu" = { fg = "light-gray", bg = "gray" }
 "ui.menu.selected" = { modifiers = ["reversed"] }
-"ui.linenr" = { fg = "light-gray", bg = "black" }
-"ui.popup" = { bg = "black" }
-"ui.window" = { bg = "black" }
-"ui.linenr.selected" = { fg = "white", bg = "black", modifiers = ["bold"] }
+"ui.linenr" = { fg = "light-gray", bg = "#181818" }
+"ui.popup" = { bg = "#181818" }
+"ui.window" = { bg = "#181818" }
+"ui.linenr.selected" = { fg = "white", bg = "#181818", modifiers = ["bold"] }
 "ui.selection" = { fg = "gray" }
-"comment" = { fg = "light-gray", modifiers = ["italic"] }
-"ui.statusline" = { fg = "white", bg = "black" }
-"ui.statusline.inactive" = { fg = "gray", bg = "black" }
-"ui.help" = { fg = "white", bg = "black" }
+"comment" = { fg = "#737574", modifiers = ["italic"] }
+"ui.statusline" = { fg = "white", bg = "#181818" }
+"ui.statusline.inactive" = { fg = "gray", bg = "#181818" }
+"ui.help" = { fg = "white", bg = "#181818" }
 "ui.cursor" = { fg = "light-gray", modifiers = ["reversed"] }
 "ui.cursor.primary" = { fg = "light-gray", modifiers = ["reversed"] }
-"ui.virtual.whitespace" = "light-gray"
+"ui.virtual.whitespace" = "#737574"
 "variable" = "light-red"
 "constant.numeric" = "yellow"
 "constant" = "yellow"
@@ -22,7 +22,7 @@
 "string"  = "light-green"
 "variable.other.member" = "light-green"
 "constant.character.escape" = "light-cyan"
-"function" = "light-blue"
+"function" = "blue"
 "constructor" = "light-blue"
 "special" = "light-blue"
 "keyword" = "light-magenta"
@@ -44,7 +44,7 @@
 "diff.minus" = "light-red"
 
 "diagnostic" = { modifiers = ["underlined"] }
-"ui.gutter" = { bg = "black" }
+"ui.gutter" = { bg = "#181818" }
 "info" = "light-blue"
 "hint" = "gray"
 "debug" = "gray"
