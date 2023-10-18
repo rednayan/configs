@@ -12,4 +12,10 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
- 
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+D = "delete_selection_noyank"
+
